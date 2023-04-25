@@ -1,0 +1,9 @@
+---
+- name: My test playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: Install multiple packages
+      yum:
+        name: ['tree', 'git', 'which', 'docker']
+        state: installed

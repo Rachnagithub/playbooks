@@ -1,0 +1,13 @@
+---
+- name: My Test playbook
+  hosts: all
+  become: true
+  tasks:
+  vars_files: 
+  - user.yml
+  tasks:
+    - name: creating users "{{user1}}"
+      user: 
+        name: "{{user1}}"
+ 
+

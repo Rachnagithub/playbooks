@@ -1,0 +1,10 @@
+---
+- name: My test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: to create a new file
+    file:
+      path: /file2.txt
+      state: touch
+     
